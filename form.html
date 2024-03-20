@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
+    "></script>
+    <script>
+        $(document).ready(function(){
+            // $('.form').submit(function(){
+
+            //     var name=$('.name').val();
+            //     var email=$('.email').val();
+            //     var password=$('.password').val();
+            
+            //     $(".error").remove
+            //     if (name.length < 1) {
+            //    $('.name').after('<span class="error">This field is required</span>');
+            //  }
+            // })
+
+    $('.submit').on('click', function() {
+    // var valid = true,
+    var
+    errorMessage = "";
+
+    if ($('.name').val() == '') {
+    //    errorMessage  = "please enter your name \n";
+    //    valid = false;
+       $('.name').after('<br><span class="error">This field is empty</span>');
+       
+// /^[a-zA-Z]+$/;
+
+
+    }
+    if ($('.email').val() == '') {
+    //    errorMessage += "please enter your email\n";
+    //    valid = false;
+       $('.email').after('<br><span class="error">This field is empty</span>');
+
+    //    /^[w-.+]+@[a-zA-Z0-9.-]+.[a-zA-z0-9]{2,4}$/;
+
+    } 
+    if($('.password').val() == '') {
+    //    errorMessage += "please enter valid password\n";
+    //    valid = false;
+              $('.password').after('<br><span class="error">This field is empty</span>');
+
+    }    
+
+    if( !valid && errorMessage.length > 0){
+    //    alert(errorMessage);
+    }   
+  });
+           })
+
+    </script>
+    <style>
+     .form{
+        width: 400px;
+        height: 400px;
+        /* background-color: rgb(222, 191, 191); */
+        
+       
+       
+     }
+     .name{
+        /* font-weight: bold; */
+        font-size: x-large;
+        border-radius: 5px;
+     }
+      .email{
+        /* font-weight: bold; */
+        font-size: x-large;
+        border-radius: 5px;
+      }
+      .password{
+        /* font-weight: bold; */
+        font-size: x-large;
+        border-radius: 5px;
+      }
+    </style>
+</head>
+<body >
+    <div class="form" >
+        <p>
+            <div >
+                <label>name</label>
+                <input class="name" type="text" placeholder="name">
+            </div>
+            
+            <div>
+                <label>Email</label>
+                <input class="email"  type="text"  placeholder="email">
+                
+            </div>
+            <div>
+                <label>password</label>
+                <input class="password" type="text"  placeholder="password">
+            </div>
+<div>
+                <button class="submit" >Register</button>
+    
+</div>
+        </p>
+    </div>
+</body>
+</html>
